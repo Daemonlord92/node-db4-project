@@ -8,6 +8,7 @@ exports.up = function(knex) {
       .createTable('ingredients', tbl => {
           tbl.increments();
           tbl.string('ingredient', 128);
+          tbl.float('ingredient_quantity')
           tbl.integer('cookbook_id')
               .unsigned()
             .notNullable()
